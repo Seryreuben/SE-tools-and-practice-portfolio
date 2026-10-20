@@ -1,9 +1,25 @@
-export default function App() {
+import Navbar from './components/Navbar'
+
+const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact']
+
+function App() {
   return (
-    <main className="container section">
-      <h1>Portfolio coming soon</h1>
-      <p>Setup complete.</p>
-      <a href="#" className="btn btn--primary">Test button</a>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        {sections.map((id) => (
+          <section
+            key={id}
+            id={id}
+            className="section container"
+            style={{ minHeight: '70vh' }}
+          >
+            <h2>{id}</h2>
+          </section>
+        ))}
+      </main>
+    </>
   )
 }
+
+export default App
