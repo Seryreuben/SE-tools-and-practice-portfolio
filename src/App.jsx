@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import Hero from './components/here'
+import Hero from './components/hero'
 const sections = ['about', 'skills', 'projects', 'experience', 'contact']
 function App() {
 return (
