@@ -34,3 +34,24 @@ transition: color 0.2s;
 .navbar__links a:hover {
 color: var(--accent);
 }
+.theme-toggle {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 2.5rem;
+height: 2.5rem;
+border: 1px solid var(--border);
+border-radius: 50%;
+background: var(--bg-alt);
+color: var(--text);
+font-size: 1rem;
+transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.theme-toggle:hover {
+color: var(--accent);
+border-color: var(--accent);
+}
+.theme-toggle:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 3px;
+}

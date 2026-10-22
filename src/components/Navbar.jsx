@@ -1,4 +1,5 @@
 import './Navbar.css';
+import ThemeToggle from './ThemeToggle'
 
 const links = [
     {id: 'about', label: 'About'},
@@ -10,7 +11,7 @@ const links = [
 
 function Navbar() {
     return ( 
-       <header header className="navbar">
+       <header className="navbar">
          <div className="container navbar__inner">
             <a href='#home' className="navbar__logo">
                  R<span>.</span>
@@ -24,6 +25,7 @@ function Navbar() {
                 ))}
               </ul>
             </nav>
+            <ThemeToggle />
          </div>
         </header>
      )
