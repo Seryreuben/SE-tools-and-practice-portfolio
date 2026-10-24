@@ -77,3 +77,82 @@ button { font: inherit; cursor: pointer; }
 .btn--primary { background: var(--accent); color: var(--accent-contrast); }
 .btn--outline { background: transparent; color: var(--accent); }
 .btn--outline:hover { background: var(--accent-soft); }
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+
+.section-heading__number { color: var(--accent); }
+.section-heading__rule { width: min(12rem, 25vw); height: 1px; background: var(--border); }
+
+.about__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(14rem, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 5rem);
+}
+
+.about__content { max-width: 42rem; }
+.about__intro { margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600; }
+.about__story { color: var(--text-muted); }
+
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+  margin-top: 2rem;
+}
+
+.about__fact dt {
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.about__fact dd { color: var(--text-muted); }
+
+.about__portrait {
+  position: relative;
+  width: min(100%, 21rem);
+  aspect-ratio: 4 / 5;
+  justify-self: center;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+}
+
+.about__initial {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: clamp(8rem, 20vw, 14rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about__portrait img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__portrait img[hidden] { display: none; }
+
+@media (max-width: 640px) {
+  .about__layout { grid-template-columns: 1fr; }
+  .about__portrait { width: min(100%, 18rem); }
+  .about__facts { grid-template-columns: 1fr; }
+}
