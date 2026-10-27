@@ -4,7 +4,7 @@ import './hero.css'
 function Hero() {
 return (
 <section id='home' className='hero section container'>
-<p className='hero__greeting'>Hey, my name is</p>
+<p className='hero__greeting'>Hi, my name is</p>
 <h1 className='hero__name'>{profile.name}.</h1>
 <p className='hero__role'>{profile.role}</p>
 <p className='hero__tagline'>{profile.tagline}</p>
